@@ -19,6 +19,7 @@ defmodule TodoappWeb.Router do
 
 #P    get "/", PageController, :index
   live "/", TodoLive, :index
+  live "/:filter", TodoLive, :index
   end
 
   # Other scopes may use custom stacks.

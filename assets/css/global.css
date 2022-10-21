@@ -1,0 +1,37 @@
+:root{
+    /* Primary */
+
+    --color-bright-blue: hsl(220, 98%, 61%);
+    --color-check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+    /*  Light Theme */
+    --color-light-gray: hsl(0, 0%, 98%);
+    --color-vlight-gray-blue: hsl(236, 33%, 92%);
+    --color-light-gray-blue: hsl(233, 11%, 84%);
+    --color-dark-gray-blue: hsl(236, 9%, 61%);
+    --color-vdark-gray-blue: hsl(235, 19%, 35%);
+    --color-light: #44CFCB;
+
+    /* Dark Theme */
+
+    --color-vdark-blue:hsl(235, 21%, 11%);
+    --color-dark-ds-blue:hsl(235, 24%, 19%);
+    --color-light-gs-blue:hsl(234, 39%, 85%);
+    --color-light-gs-blue-hover:hsl(236, 33%, 92%);
+    --color-dark-gs-blue:hsl(234, 11%, 52%);
+    --color-vdark-gs-blue:hsl(233, 14%, 35%);
+    --color-vdark-gs-blue-hover:hsl(237, 14%, 26%);
+
+    /* Fontes */
+
+    font-size: 18px;
+    font-family: Josefin Sans;
+    font-weight: 400,700;
+
+
+
+    /* Layout */
+    --container-width-lg: 1440px;
+    --container-width-md: 86%;
+    --container-width-sm: 375px;
+}
