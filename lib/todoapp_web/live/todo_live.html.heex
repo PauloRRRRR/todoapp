@@ -1,0 +1,18 @@
+
+<div>
+    <p>To do List</p>
+    <p>
+        <strong>Filtros</strong>
+        <.filter_button current_filter={@filter} filter="all" label="Todos"/>
+        <.filter_button current_filter={@filter} filter="completed" label="Finalizados"/>
+        <.filter_button current_filter={@filter} filter="active" label="Ativos"/>
+        
+    </p>
+    <ul>
+        <%= for todo <- @filtered_todos do %>
+        <li><%= todo.message %>(<%= if todo.completed, do: "Finalizado", else: "Pendente"%>)</li>
+        <% end %>
+    </ul>
+</div>
+
+
