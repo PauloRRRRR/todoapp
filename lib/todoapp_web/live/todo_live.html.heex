@@ -1,29 +1,30 @@
 
 <div>
     <p>To do List</p>
-    <.form for={:new_todo} let={f} phx-submit="todo_form_submit">
-        <%= text_input f, :message %>
+    <.form for={:new_todo} let={f} phx-submit="todo_form_submit" className="form">
+        <div className="form_in"><%= text_input f, :message %></div>
     </.form>
-    <p>
-        <strong>Filtros</strong>
-
-        <.filter_button current_filter={@filter} filter="all" label="Todos"/>
-        <.filter_button current_filter={@filter} filter="active" label="Ativos"/>
-        <.filter_button current_filter={@filter} filter="completed" label="Finalizados"/>
-        
-    </p>
-    <ul>
-        <%= for todo <- @filtered_todos do %>
-          <li>
-            <%= todo.message %> 
-            (<%= if todo.completed, do: "Finalizado", else: "Pendente" %>)
-    
-            <button phx-click="toggle_todo_completed" phx-value-id={todo.id}>
-              <%= if todo.completed, do: "Ativar", else: "Completar" %>
-            </button>
-          </li>
-        <% end %>
-    </ul>
+    <div className="container_list">
+      <p>
+          <strong>Filtros</strong>
+          <.filter_button current_filter={@filter} filter="all" label="Todos"/>
+          <.filter_button current_filter={@filter} filter="active" label="Ativos"/>
+          <.filter_button current_filter={@filter} filter="completed" label="Finalizados"/>
+      
+      </p>
+      <ul>
+          <%= for todo <- @filtered_todos do %>
+            <li>
+              <%= todo.message %>
+              (<%= if todo.completed, do: "Finalizado", else: "Pendente" %>)
+      
+              <button phx-click="toggle_todo_completed" phx-value-id={todo.id}>
+                <%= if todo.completed, do: "Ativar", else: "Completar" %>
+              </button>
+            </li>
+          <% end %>
+      </ul>
+    </div>
 </div>
 
 
