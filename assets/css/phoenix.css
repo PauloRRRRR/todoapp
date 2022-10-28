@@ -113,8 +113,8 @@ color: var(--color-light-gray);
 
 img{
   max-width: 100%;
-  margin: 0;
-  padding: 0;
+  display: block;
+  pointer-events: none;
 }
 
 body{
